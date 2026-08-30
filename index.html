@@ -1,55 +1,118 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Yalla Foot</title>
+    <title>Yalla Foot - مباريات اليوم</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <h1>⚽ Yalla Foot</h1>
+<header class="header">
+
+    <div class="logo">
+        ⚽ Yalla Foot
+    </div>
 
     <nav>
         <a href="#">الرئيسية</a>
-        <a href="#">مباريات اليوم</a>
-        <a href="#">مباشر</a>
-        <a href="#">البطولات</a>
+        <a href="#matches">مباريات اليوم</a>
+        <a href="#live">مباشر</a>
+        <a href="#leagues">البطولات</a>
     </nav>
+
 </header>
+
 
 <main>
 
     <section class="hero">
-        <h2>مباريات اليوم</h2>
-        <p>تابع مواعيد ونتائج مباريات كرة القدم</p>
+
+        <h1>مباريات اليوم</h1>
+
+        <p>
+            تابع مواعيد ونتائج أهم مباريات كرة القدم
+        </p>
+
     </section>
 
-    <section>
+
+    <section id="live" class="section">
+
+        <h2>🔴 مباشر الآن</h2>
+
+        <div class="live-box">
+            لا توجد مباريات مباشرة حاليًا
+        </div>
+
+    </section>
+
+
+    <section id="matches" class="section">
+
         <h2>⚽ مباريات اليوم</h2>
 
-        <div id="matches">
+        <div id="matches-container">
 
-            <div class="match">
-                <div>ريال مدريد</div>
-                <div class="time">21:00</div>
-                <div>برشلونة</div>
+            <!-- المباريات ستظهر هنا -->
+
+        </div>
+
+    </section>
+
+
+    <section id="leagues" class="section">
+
+        <h2>🏆 البطولات</h2>
+
+        <div class="leagues">
+
+            <div class="league">
+                🇪🇸 الدوري الإسباني
+            </div>
+
+            <div class="league">
+                🏴 الدوري الإنجليزي
+            </div>
+
+            <div class="league">
+                🇮🇹 الدوري الإيطالي
+            </div>
+
+            <div class="league">
+                🇩🇪 الدوري الألماني
+            </div>
+
+            <div class="league">
+                🇫🇷 الدوري الفرنسي
+            </div>
+
+            <div class="league">
+                🌍 دوري أبطال أوروبا
             </div>
 
         </div>
+
     </section>
 
 </main>
 
+
 <footer>
-    <p>© 2026 Yalla Foot</p>
+
+    <p>
+        © 2026 Yalla Foot
+    </p>
+
 </footer>
+
 
 <script src="script.js"></script>
 
 </body>
-          </html>
+
+        </html>
