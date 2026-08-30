@@ -1,119 +1,114 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
-<head>
+<!DOCTYPE html><html lang="ar" dir="rtl"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Yalla Foot - مباريات اليوم</title>
+    <link rel="stylesheet" href="./style.css">
+</head><body><header class="header">
+    <div class="logo">⚽ Yalla Foot</div><nav>
+    <a href="#top">🏠 الرئيسية</a>
+    <a href="#matches">⚽ مباريات اليوم</a>
+    <a href="#live">🔴 مباشر</a>
+    <a href="#leagues">🏆 البطولات</a>
+</nav>
 
-    <link rel="stylesheet" href="style.css">
-</head>
+</header><main id="top"><section class="hero">
+    <h1>⚽ مباريات اليوم</h1>
+    <p>تابع مواعيد أهم مباريات كرة القدم</p>
 
-<body>
+    <input
+        id="search"
+        type="search"
+        placeholder="🔍 ابحث عن فريق..."
+    >
+</section>
 
-<header class="header">
+<section id="live" class="section">
+    <h2>🔴 مباشر الآن</h2>
 
-    <div class="logo">
-        ⚽ Yalla Foot
+    <div class="live-box">
+        لا توجد مباريات مباشرة حاليًا
+    </div>
+</section>
+
+<section id="matches" class="section">
+    <h2>⚽ مباريات اليوم</h2>
+
+    <div id="matches-container"></div>
+</section>
+
+<section id="leagues" class="section">
+    <h2>🏆 البطولات</h2>
+
+    <div class="leagues">
+
+        <button class="league" data-league="الدوري الإسباني">
+            🇪🇸 الدوري الإسباني
+        </button>
+
+        <button class="league" data-league="الدوري الإنجليزي">
+            🏴 الدوري الإنجليزي
+        </button>
+
+        <button class="league" data-league="الدوري الإيطالي">
+            🇮🇹 الدوري الإيطالي
+        </button>
+
+        <button class="league" data-league="الدوري الألماني">
+            🇩🇪 الدوري الألماني
+        </button>
+
+        <button class="league" data-league="الدوري الفرنسي">
+            🇫🇷 الدوري الفرنسي
+        </button>
+
+        <button class="league" data-league="دوري أبطال أوروبا">
+            🌍 دوري أبطال أوروبا
+        </button>
+
+    </div>
+</section>
+
+</main><!-- تفاصيل المباراة --><div id="match-modal" class="modal"><div class="modal-box">
+
+    <button id="close-match" class="close-button">✕</button>
+
+    <h2>⚽ تفاصيل المباراة</h2>
+
+    <div class="teams">
+
+        <div id="home-team"></div>
+
+        <strong>VS</strong>
+
+        <div id="away-team"></div>
+
     </div>
 
-    <nav>
-        <a href="#">الرئيسية</a>
-        <a href="#matches">مباريات اليوم</a>
-        <a href="#live">مباشر</a>
-        <a href="#leagues">البطولات</a>
-    </nav>
+    <div class="info">
 
-</header>
+        <p>🕐 الموعد: <strong id="match-time"></strong></p>
 
+        <p>🏆 البطولة: <strong id="match-league"></strong></p>
 
-<main>
+        <p>🏟️ الملعب: <strong id="match-stadium"></strong></p>
 
-    <section class="hero">
+    </div>
 
-        <h1>مباريات اليوم</h1>
+</div>
 
-        <p>
-            تابع مواعيد ونتائج أهم مباريات كرة القدم
-        </p>
+</div><!-- تفاصيل البطولة --><div id="league-modal" class="modal"><div class="modal-box">
 
-    </section>
+    <button id="close-league" class="close-button">✕</button>
 
+    <h2>🏆 البطولة</h2>
 
-    <section id="live" class="section">
+    <h3 id="league-name"></h3>
 
-        <h2>🔴 مباشر الآن</h2>
+    <div id="league-matches"></div>
 
-        <div class="live-box">
-            لا توجد مباريات مباشرة حاليًا
-        </div>
+</div>
 
-    </section>
-
-
-    <section id="matches" class="section">
-
-        <h2>⚽ مباريات اليوم</h2>
-
-        <div id="matches-container">
-
-            <!-- المباريات ستظهر هنا -->
-
-        </div>
-
-    </section>
-
-
-    <section id="leagues" class="section">
-
-        <h2>🏆 البطولات</h2>
-
-        <div class="leagues">
-
-            <div class="league">
-                🇪🇸 الدوري الإسباني
-            </div>
-
-            <div class="league">
-                🏴 الدوري الإنجليزي
-            </div>
-
-            <div class="league">
-                🇮🇹 الدوري الإيطالي
-            </div>
-
-            <div class="league">
-                🇩🇪 الدوري الألماني
-            </div>
-
-            <div class="league">
-                🇫🇷 الدوري الفرنسي
-            </div>
-
-            <div class="league">
-                🌍 دوري أبطال أوروبا
-            </div>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<footer>
-
-    <p>
-        © 2026 Yalla Foot
-    </p>
-
-</footer>
-
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
-    
+</div><footer>
+    <p>© 2026 Yalla Foot</p>
+</footer><script src="./script.js"></script></body>
+    </html>
